@@ -1,0 +1,1026 @@
+rate this code: <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apprenez l'anglais avec le professeur Narjis - Cours personnalisés pour enfants et adultes au Maroc">
+    <title>TEACHER NARJIS | Enseignante d'anglais professionnelle au Maroc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --dark-bg: #0a0c17;
+            --primary: #e3671b;
+            --secondary: #de8b5b;
+            --accent: #789953;
+            --light-bg: #f9f9f9;
+            --text: #333;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Reset & Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            background: #b65b2f;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(222, 139, 91, 0.2);
+        }
+        
+        /* Header with Logo */
+        .header-container {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo-header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 60px;
+            width: auto;
+            margin-right: 15px;
+        }
+        
+        .header-title h1 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover, nav a:focus {
+            color: var(--white);
+            outline: 2px solid var(--secondary);
+        }
+
+        .test-btn {
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .test-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* WhatsApp button */
+        .whatsapp-btn {
+            background: var(--accent);
+        }
+        
+        .whatsapp-btn:hover {
+            background: #5a7a3d;
+        }
+
+        /* Kids test button */
+        .kids-test-btn {
+            background: var(--primary);
+        }
+
+        .kids-test-btn:hover {
+            background: #b65b2f;
+        }
+
+        /* Adults test button */
+        .adults-test-btn {
+            background: var(--secondary);
+        }
+        
+        .adults-test-btn:hover {
+            background: #c17a4e;
+        }
+        
+        .language-switcher {
+            display: flex;
+            margin-left: 10px;
+        }
+        
+        .language-btn {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            border: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.8rem;
+        }
+        
+        .language-btn:hover {
+            background: var(--primary);
+        }
+        
+        .language-btn.active {
+            background: var(--secondary);
+            font-weight: bold;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 12, 23, 0.85), rgba(10, 12, 23, 0.85)), url('file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Background.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 2rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        /* About Section */
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-img {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        
+        .about-img::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 5px solid var(--accent);
+            border-radius: 50%;
+            top: -15px;
+            left: -15px;
+            z-index: -1;
+        }
+        
+        .about-img img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent);
+            box-shadow: var(--shadow);
+            aspect-ratio: 1/1;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            color: var(--dark-bg);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .about-text h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Services Section */
+        .services {
+            background: #f0f0f0;
+        }
+        
+        .price-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .price-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--secondary);
+        }
+        
+        .price-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .price-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .price {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: var(--dark-bg);
+            margin: 1.5rem 0;
+        }
+        
+        .price-card p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .price-highlight {
+            background: var(--accent);
+            color: var(--white);
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--dark-bg);
+            color: var(--white);
+        }
+        
+        .testimonial-videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .video-container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .video-container:hover {
+            transform: scale(1.03);
+        }
+        
+        .testimonial-video {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow);
+            background: #000;
+        }
+        
+        /* FIX FOR VIDEO DISPLAY ISSUE */
+        .testimonial-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .video-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-size: 1.2rem;
+            z-index: 10;
+        }
+        
+        .video-error {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .video-caption {
+            font-style: italic;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        .video-author {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--accent);
+            color: var(--white);
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-method {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .contact-method h3 {
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+        }
+        
+        .contact-method p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background: var(--dark-bg);
+            transform: translateY(-5px);
+        }
+        
+        .social-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+        
+        /* Footer with Logo */
+        .footer-container {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-footer {
+            height: 70px;
+            width: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            gap: 25px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+            position: relative;
+        }
+        
+        .footer-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #aaa;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-text {
+                padding-left: 0;
+                margin-top: 3rem;
+            }
+            
+            .about-text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .about-img::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 1.5rem;
+            }
+            
+            nav {
+                margin-top: 1.5rem;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                gap: 10px;
+            }
+            
+            .language-switcher {
+                margin: 20px 0 0 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .testimonial-videos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header class="header-container">
+        <div class="logo-header">
+            <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/NLINE_ESL_TEACHER-removebg-preview%20(1).png" alt="PROFESSEUR NARJIS Logo" class="logo-img">
+            <div class="header-title">
+               
+            </div>
+        </div>
+        <nav>
+            <a href="#about">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#kids-test" class="test-btn kids-test-btn">Test Enfants</a>
+            <a href="https://forms.gle/igtTd5xo9kDRKgoS9" class="test-btn adults-test-btn">Test Adultes</a>
+            <a href="https://wa.me/212702697370" class="test-btn whatsapp-btn">Contact WhatsApp</a>
+            
+            <div class="language-switcher">
+                <button class="language-btn active">FR</button>
+                <button class="language-btn">AR</button>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 class="animate">Apprenez l'anglais avec plaisir et confiance !</h2>
+        <p class="animate">Cours personnalisés pour enfants et adultes avec plus de 7 ans d'expérience dans l'enseignement en ligne au Maroc.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn animate">Réserver un cours</a>
+            <a href="#services" class="btn btn-secondary animate">Voir les cours</a>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img animate">
+                    <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Untitled%20(19).jpg" alt="Professeure Narjis" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <h2 class="animate">À propos de moi</h2>
+                    <p class="animate">Bonjour ! Je suis Narjis Ait tamlihat, enseignante professionnelle d'anglais basée au Maroc avec plus de 7 ans d'expérience dans l'aide aux étudiants pour atteindre leurs objectifs linguistiques.</p>
+                    <p class="animate">Ma méthode d'enseignement privilégie des leçons interactives et ludiques basées sur des situations réelles pour des progrès rapides et durables. Je crée des cours sur mesure adaptés aux besoins et au style d'apprentissage de chaque étudiant.</p>
+                    <p class="animate">Que vous prépariez un examen, ayez besoin d'anglais professionnel ou souhaitiez améliorer votre expression orale, je peux vous aider à atteindre vos objectifs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mes services d'enseignement</h2>
+                <p>Tous les cours sont disponibles en ligne avec des horaires flexibles</p>
+            </div>
+            
+            <div class="price-cards">
+                <!-- Cours pour enfants/ados -->
+                <div class="price-card animate">
+                    <h3><i class="fas fa-child"></i> Cours en groupe (Enfants/Ados)</h3>
+                    <p>Cours en petit groupe pour jeunes apprenants</p>
+                    <div class="price">250 DH/mois</div>
+                    <p><span class="price-highlight">8 séances</span> par mois</p>
+                </div>
+                
+                <div class="price-card animate">
+                    <h3><i class="fas fa-user-graduate"></i> Cours particuliers (Enfants/Ados)</h3>
+                    <p>Enseignement personnalisé en individuel</p>
+                    <div class="price">1500 DH/mois</div>
+                    <p>Adapté à vos besoins</p>
+                </div>
+                
+                <div class="price-card animate">
+                    <h3><i class="fas fa-comments"></i> Cours de communication (Enfants/Ados)</h3>
+                    <p>Accent sur l'expression et la compréhension orales</p>
+                    <div class="price">300 DH/mois</div>
+                    <p><span class="price-highlight">4 séances</span> par mois</p>
+                </div>
+                
+                <!-- Cours pour adultes -->
+                <div class="price-card animate">
+                    <h3><i class="fas fa-users"></i> Cours en groupe (Adultes)</h3>
+                    <p>Cours collectifs pour adultes</p>
+                    <div class="price">300 DH/mois</div>
+                    <p><span class="price-highlight">8 séances</span> par mois</p>
+                </div>
+                
+                <div class="price-card animate">
+                    <h3><i class="fas fa-user-tie"></i> Cours particuliers (Adultes)</h3>
+                    <p>Enseignement personnalisé en individuel</p>
+                    <div class="price">1800 DH/mois</div>
+                    <p>Adapté à vos besoins</p>
+                </div>
+                
+                <div class="price-card animate">
+                    <h3><i class="fas fa-microphone"></i> Cours de communication (Adultes)</h3>
+                    <p>Pratique conversationnelle intensive</p>
+                    <div class="price">500 DH/mois</div>
+                    <p><span class="price-highlight">4 séances</span> par mois</p>
+                </div>
+                
+                <!-- Cours spéciaux -->
+                <div class="price-card animate">
+                    <h3><i class="fas fa-graduation-cap"></i> Préparation Baccalauréat</h3>
+                    <p>Préparation aux examens 1ère & 2ème années</p>
+                    <div class="price">300 DH/mois</div>
+                    <p><span class="price-highlight">4 séances</span> par mois</p>
+                </div>
+                
+                <div class="price-card animate">
+                    <h3><i class="fas fa-globe-africa"></i> Anglais touristique</h3>
+                    <p>Cours spécialisé pour professionnels du tourisme</p>
+                    <div class="price">Tarif personnalisé</div>
+                    <p>Adapté à vos besoins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Témoignages vidéo de mes étudiants</h2>
+            </div>
+            
+            <div class="testimonial-videos">
+                <!-- Testimonial 1 -->
+                <div class="video-container animate">
+                    <div class="testimonial-video">
+                        <div class="video-loading">
+                            <i class="fas fa-spinner fa-spin"></i> Chargement de la vidéo...
+                        </div>
+                        <div class="video-error" style="display: none;">
+                            Problème de chargement vidéo. Essayez de rafraîchir la page.
+                        </div>
+                        <video controls width="100%" height="100%">
+                            <source src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Kids%20tem.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture vidéo.
+                        </video>
+                    </div>
+                    <p class="video-caption">"Progrès remarquables en seulement 2 mois"</p>
+                    <p class="video-author">- Fatima, Parent</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="video-container animate">
+                    <div class="testimonial-video">
+                        <div class="video-loading">
+                            <i class="fas fa-spinner fa-spin"></i> Chargement de la vidéo...
+                        </div>
+                        <div class="video-error" style="display: none;">
+                            Problème de chargement vidéo. Essayez de rafraîchir la page.
+                        </div>
+                        <video controls width="100%" height="100%">
+                            <source src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/testimonial2.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture vidéo.
+                        </video>
+                    </div>
+                    <p class="video-caption">"Je parle maintenant avec confiance"</p>
+                    <p class="video-author">- Ahmed, Chef d'entreprise</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="video-container animate">
+                    <div class="testimonial-video">
+                        <div class="video-loading">
+                            <i class="fas fa-spinner fa-spin"></i> Chargement de la vidéo...
+                        </div>
+                        <div class="video-error" style="display: none;">
+                            Problème de chargement vidéo. Essayez de rafraîchir la page.
+                        </div>
+                        <video controls width="100%" height="100%">
+                            <source src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/testimonial3.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture vidéo.
+                        </video>
+                    </div>
+                    <p class="video-caption">"J'ai obtenu un meilleur emploi grâce à ces cours"</p>
+                    <p class="video-author">- Karim, Personnel hôtelier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Prêt(e) à commencer ?</h2>
+                <p>Contactez-moi dès aujourd'hui pour réserver votre première leçon !</p>
+            </div>
+            
+            <div class="contact-methods">
+                <div class="contact-method animate">
+                    <h3><i class="fas fa-envelope"></i> Email</h3>
+                    <p>teacher.narjis@gmail.com</p>
+                    <a href="mailto:teacher.narjis@gmail.com" class="btn" style="margin-top: 15px;">Envoyer un email</a>
+                </div>
+                
+                <div class="contact-method animate">
+                    <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+                    <p>+212 702-697370</p>
+                    <a href="https://wa.me/212702697370" class="btn">Envoyer un message</a>
+                </div>
+                
+                <div class="contact-method animate">
+                    <h3><i class="fas fa-hashtag"></i> Réseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/teacher.narjis/" target="_blank" title="Instagram" rel="noopener noreferrer">
+                            <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo_-_Copie-removebg-preview.png" alt="Instagram" class="social-logo">
+                        </a>
+                        <a href="https://www.tiktok.com/@teachernarjis/" target="_blank" title="TikTok" rel="noopener noreferrer">
+                            <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo-removebg-preview.png" alt="TikTok" class="social-logo">
+                        </a>
+                        <a href="https://www.linkedin.com/in/teacher-narjis-b7b53933b/" target="_blank" title="LinkedIn" rel="noopener noreferrer">
+                            <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo_-_Copie__2__-_Copie-removebg-preview.png" alt="LinkedIn" class="social-logo">
+                        </a>
+                        <a href="https://www.youtube.com/@TeacherNarjis/" target="_blank" title="YouTube" rel="noopener noreferrer">
+                            <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo_-_Copie__2_-removebg-preview.png" alt="YouTube" class="social-logo">
+                        </a>
+                    </div>
+                    <p style="margin-top: 20px; font-style: italic;">Suivez-moi pour des conseils gratuits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer with Logo -->
+    <footer class="footer-container">
+        <div class="container">
+            <div class="footer-content">
+                <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/pixelcut-export%20(13).png" alt="PROFESSEUR NARJIS Logo" class="logo-footer">
+                
+                <div class="footer-links">
+                    <a href="#about">À propos</a>
+                    <a href="#services">Cours</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#kids-test">Test Enfants</a>
+                    <a href="https://forms.gle/igtTd5xo9kDRKgoS9">Test Adultes</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.instagram.com/teacher.narjis/" target="_blank" title="Instagram" rel="noopener noreferrer">
+                        <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo_-_Copie-removebg-preview.png" alt="Instagram" class="social-logo">
+                    </a>
+                    <a href="https://www.tiktok.com/@teachernarjis/" target="_blank" title="TikTok" rel="noopener noreferrer">
+                        <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo-removebg-preview.png" alt="TikTok" class="social-logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/teacher-narjis-b7b53933b/" target="_blank" title="LinkedIn" rel="noopener noreferrer">
+                        <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo_-_Copie__2__-_Copie-removebg-preview.png" alt="LinkedIn" class="social-logo">
+                    </a>
+                    <a href="https://www.youtube.com/@TeacherNarjis/" target="_blank" title="YouTube" rel="noopener noreferrer">
+                        <img src="file:///C:/Users/Admin/Desktop/Nouveau%20dossier%20(3)/Set_Of_Gradient_Social_Media_Circles_Logos_With_New_X_logo_-_Copie__2_-removebg-preview.png" alt="YouTube" class="social-logo">
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2020 TEACHER NARJIS. Tous droits réservés.</p>
+                    <p>ONLINE ESL TEACHER | Basée au Maroc | teachernarjis.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageBtns = document.querySelectorAll('.language-btn');
+            
+            languageBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    languageBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Here you would typically load the appropriate language content
+                    const lang = this.textContent;
+                    console.log('Changement vers:', lang);
+                    
+                    // For demo purposes, show an alert
+                    if(lang === 'AR') {
+                        alert("الوضع العربي قيد التطوير - Arabic version in development");
+                    }
+                });
+            });
+            
+            // Animation on scroll
+            const animateElements = document.querySelectorAll('.animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Video loading and error handling
+            document.querySelectorAll('video').forEach(video => {
+                const container = video.closest('.testimonial-video');
+                const loading = container.querySelector('.video-loading');
+                const errorMsg = container.querySelector('.video-error');
+                
+                // Remove loading message when video can play
+                video.addEventListener('canplay', function() {
+                    loading.style.display = 'none';
+                });
+                
+                // Show error if video fails to load
+                video.addEventListener('error', function() {
+                    loading.style.display = 'none';
+                    errorMsg.style.display = 'flex';
+                });
+                
+                // Show loading when video is waiting for data
+                video.addEventListener('waiting', function() {
+                    loading.style.display = 'flex';
+                });
+                
+                // Hide loading when video is playing
+                video.addEventListener('playing', function() {
+                    loading.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
