@@ -119,6 +119,7 @@
             display: flex;
             list-style: none;
             margin-right: 5%;
+            align-items: center;
         }
 
         .nav-links li {
@@ -250,8 +251,9 @@
 
         .about-text {
             text-align: right;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-size: 18px;
+            line-height: 1.7;
         }
 
         .reason-title {
@@ -264,16 +266,15 @@
 
         .goals {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 20px;
+            flex-direction: column;
+            gap: 30px;
             width: 100%;
         }
 
         .goal-item {
             width: 100%;
             text-align: right;
-            padding: 25px;
+            padding: 30px;
             background: var(--white);
             border-radius: 10px;
             transition: transform 0.3s ease;
@@ -288,16 +289,16 @@
         }
 
         .goal-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: var(--secondary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 20px;
+            margin-left: 25px;
             color: var(--white);
-            font-size: 24px;
+            font-size: 28px;
             flex-shrink: 0;
         }
 
@@ -306,9 +307,14 @@
         }
 
         .goal-title {
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 15px;
             color: var(--primary);
+        }
+        
+        .goal-content p {
+            font-size: 17px;
+            line-height: 1.6;
         }
 
         /* Services Section */
@@ -373,21 +379,24 @@
 
         .service-price {
             font-weight: 700;
-            font-size: 20px;
+            font-size: 24px;
             color: var(--secondary);
-            margin-top: auto;
+            margin-top: 15px;
             padding-top: 15px;
+            border-top: 1px dashed #eee;
         }
         
         .service-details {
             margin-bottom: 10px;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.5;
         }
         
         .service-details i {
             margin-right: 5px;
             color: var(--accent);
+            width: 20px;
+            text-align: center;
         }
 
         /* Courses Section */
@@ -430,9 +439,9 @@
 
         .play-icon {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.8);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -442,8 +451,15 @@
             transition: transform 0.3s ease;
         }
 
+        .play-icon i {
+            font-size: 24px;
+            color: var(--accent);
+            margin-left: 4px;
+        }
+
         .play-icon:hover {
             transform: scale(1.1);
+            background: var(--white);
         }
 
         /* Signup Section */
@@ -454,1217 +470,16 @@
 
         .signup-container {
             max-width: 600px;
-            margin-left: auto;
-        }
-
-        .signup-subtitle {
-            text-align: right;
-            margin-bottom: 40px;
-            font-size: 18px;
-        }
-
-        .signup-form {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-            text-align: right;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: var(--font-body);
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--secondary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(244, 124, 0, 0.2);
-        }
-
-        .select-wrapper {
-            position: relative;
-        }
-
-        .select-wrapper::after {
-            content: "▼";
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            color: #777;
-        }
-
-        .signup-btn {
-            width: 100%;
-            padding: 15px;
-            font-size: 18px;
-            margin-top: 10px;
-            background: linear-gradient(to right, #f47c00, #f37221);
-            border: none;
-        }
-
-        .signup-btn:hover {
-            background: linear-gradient(to right, #e06d00, #e3681e);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background: linear-gradient(to bottom, #feffff, #f0f9ff);
-        }
-
-        .contact-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .contact-title {
-            font-size: 48px;
-            color: var(--primary);
-            text-align: right;
-            line-height: 1.3;
-            max-width: 600px;
-            margin-bottom: 30px;
-        }
-
-        .contact-subtitle {
-            font-size: 24px;
-            color: #f35000;
-            margin-bottom: 60px;
-            text-align: right;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-            gap: 10px;
-            direction: rtl;
-            background: var(--white);
-            padding: 15px 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 20px;
-            justify-content: flex-end;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--secondary);
-            font-size: 20px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        }
-
-        .social-icon:hover {
-            background: var(--secondary);
-            color: var(--white);
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .footer-title {
-            font-size: 20px;
-            margin-bottom: 25px;
-            color: var(--light);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #bbb;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--light);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #bbb;
-            font-size: 14px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 48px;
-            }
-            
-            .about-content {
-                padding-left: 15%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                background: var(--white);
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-                transform: translateY(-150%);
-                transition: transform 0.4s ease;
-                margin-right: 0;
-            }
-            
-            .nav-active {
-                transform: translateY(0);
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .hero-title {
-                font-size: 40px;
-                max-width: 100%;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-            }
-            
-            .about-content {
-                padding-left: 0;
-                align-items: center;
-            }
-            
-            .about-text, .reason-title {
-                text-align: center;
-            }
-            
-            .goals {
-                justify-content: center;
-            }
-            
-            .goal-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .goal-icon {
-                margin: 0 auto 15px;
-            }
-            
-            .contact-title {
-                font-size: 36px;
-            }
-            
-            .signup-container {
-                margin: 0 auto;
-            }
-            
-            .signup-subtitle {
-                text-align: center;
-            }
-            
-            .form-group {
-                text-align: left;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-title {
-                font-size: 32px;
-            }
-            
-            .section-title {
-                font-size: 36px;
-            }
-            
-            .contact-title {
-                font-size: 28px;
-            }
-            
-            .contact-subtitle {
-                font-size: 20px;
-            }
-            
-            .signup-form {
-                padding: 25px;
-            }
-            
-            .service-img {
-                height: 150px;
-            }
-            
-            .service-title {
-                font-size: 18px;
-            }
-            
-            .service-price {
-                font-size: 18px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="logo header.png" alt="Teacher Narjis Logo">
-            </div>
-            <div class="mobile-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="https://youtube.com" target="_blank">BLOG</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="https://wa.me/" target="_blank" class="nav-contact">CONTACT</a></li>
-                <li><a href="#signup" class="nav-signup">S'INSCRIRE</a></li>
-                <div class="language-toggle">
-                    <div class="lang-btn lang-fr">FR</div>
-                    <div class="lang-btn lang-ar">AR</div>
-                </div>
-            </ul>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title">Cours d'anglais</h1>
-            <p class="hero-subtitle">En ligne et en direct</p>
-            <p class="hero-subheadline"><i class="fas fa-info-circle"></i>En petits groupes ou cours particuliers.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">NOS COURS</a>
-                <a href="#signup" class="btn btn-secondary">S'INSCRIRE</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">À propos de Teacher Narjis</h2>
-            <div class="about-content">
-                <p class="about-text">Fondé par Narjis, une Marocaine ayant elle-même maîtrisé l’anglais, Teacher Narjis Courses permet aux Marocains ambitieux d’apprendre un anglais pratique et concret. Nous nous concentrons sur le déblocage d’opportunités, le renforcement de la confiance en soi et la création de liens culturels authentiques. Notre approche unique combine des méthodes pédagogiques éprouvées avec une profonde empathie culturelle, guidant les élèves à communiquer avec aisance tout en étant fiers de leur identité marocaine – que ce soit pour les examens, le travail ou la vie quotidienne.</p>
-                <h3 class="reason-title">NOTRE RAISON D'ÊTRE :</h3>
-                <div class="goals">
-                    <div class="goal-item">
-                        <div class="goal-icon">
-                            🇲🇦
-                        </div>
-                        <div class="goal-content">
-                            <h3 class="goal-title">Donner vie aux ambitions mondiales du Maroc</h3>
-                            <p>Nous dotons étudiants, professionnels et voyageurs des compétences opérationnelles en anglais indispensables pour réussir à l'international : études à l'étranger, emploi de rêve, excellence dans le tourisme ou échanges en ligne assurés. Votre réussite prime sur la grammaire théorique.</p>
-                        </div>
-                    </div>
-                    <div class="goal-item">
-                        <div class="goal-icon">
-                            💬
-                        </div>
-                        <div class="goal-content">
-                            <h3 class="goal-title">Forger une confiance linguistique authentique</h3>
-                            <p>Apprendre l'anglais dans un contexte multilingue (arabe, français, darija) comporte des défis uniques. Notre environnement bienveillant et culturellement éclairé vous aide à surmonter : les obstacles de prononciation, l'anxiété liée à l'accent, les écarts culturels. Ici, les erreurs deviennent des étapes naturelles – et votre assurance, votre atout décisif.</p>
-                        </div>
-                    </div>
-                    <div class="goal-item">
-                        <div class="goal-icon">
-                            🌐
-                        </div>
-                        <div class="goal-content">
-                            <h3 class="goal-title">L'excellence anglaise accessible dans tout le Maroc</h3>
-                            <p>La qualité de l'apprentissage ne devrait pas dépendre de votre localisation. Grâce à nos cours en ligne flexibles, nous offrons une formation : personnalisée, concrète, financièrement accessible dans chaque région du Maroc, des grandes villes (Casablanca, Rabat) aux villages les plus isolés. Votre réalité. Votre rythme. Votre succès.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Services et tarifs</h2>
-            <p class="services-subtitle">Choisissez le plan parfait pour atteindre vos objectifs en anglais.</p>
-            <div class="service-cards">
-                <!-- Kindy Courses -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('Kindy Courses.jpg');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Kindy Courses</h3>
-                        <div class="service-details">
-                            <i class="fas fa-users"></i> 4-5 enfants par classe
-                        </div>
-                        <div class="service-details">
-                            <i class="fas fa-clock"></i> 8 séances d'une heure par mois
-                        </div>
-                        <p class="service-price">250 DH</p>
-                    </div>
-                </div>
-                
-                <!-- One to one kids -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('One to one Kids.png');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">One to one kids</h3>
-                        <p>Programme personnalisé en individuel, adapté au besoins de vos petits. (+9 ans)</p>
-                        <p class="service-price">1500 DH</p>
-                    </div>
-                </div>
-                
-                <!-- Teens Courses -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('Teens Courses.jpg');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Teens Courses</h3>
-                        <div class="service-details">
-                            <i class="fas fa-users"></i> 5 élèves par classe
-                        </div>
-                        <div class="service-details">
-                            <i class="fas fa-clock"></i> 8 séances d'une heure et demi par mois
-                        </div>
-                        <p class="service-price">300 DH</p>
-                    </div>
-                </div>
-                
-                <!-- Adults courses -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('Adultes Courses.jpg');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Adults courses</h3>
-                        <div class="service-details">
-                            <i class="fas fa-users"></i> 5-6 personnes par classe
-                        </div>
-                        <div class="service-details">
-                            <i class="fas fa-clock"></i> 8 séances d'une heure et demi par mois
-                        </div>
-                        <p class="service-price">300 DH</p>
-                    </div>
-                </div>
-                
-                <!-- One to one Adultes -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('Business courses.png');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">One to one Adultes</h3>
-                        <p>Programme personnalisé en individuel, adapté a vos besoins.</p>
-                        <p class="service-price">1800 DH</p>
-                    </div>
-                </div>
-                
-                <!-- Communication -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('Communication.jpg');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Communication</h3>
-                        <div class="service-details">
-                            <i class="fas fa-users"></i> 4 personnes par classe
-                        </div>
-                        <div class="service-details">
-                            <i class="fas fa-clock"></i> 8 séances d'une heure et demi par mois
-                        </div>
-                        <p class="service-price">350 DH</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses">
-        <div class="container">
-            <h2 class="section-title">Exemples de cours</h2>
-            <div class="courses-container">
-                <div class="course-video">
-                    <i class="fas fa-play-circle"></i>
-                    <div class="play-icon">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <div class="course-video">
-                    <i class="fas fa-play-circle"></i>
-                    <div class="play-icon">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <div class="course-video">
-                    <i class="fas fa-play-circle"></i>
-                    <div class="play-icon">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Signup Section -->
-    <section id="signup" class="signup">
-        <div class="container">
-            <h2 class="section-title">S'INSCRIRE</h2>
-            <p class="signup-subtitle">En quelques étapes simples, rejoignez une communauté où votre identité est célébrée, vos objectifs sont prioritaires et votre parcours en anglais est conçu spécialement pour vous.</p>
-            <div class="signup-container">
-                <form class="signup-form" id="signup-form">
-                    <div class="form-group">
-                        <label for="fullname">Nom Complet</label>
-                        <input type="text" id="fullname" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="course-type">Type de Cours</label>
-                        <div class="select-wrapper">
-                            <select id="course-type" class="form-control" required>
-                                <option value="">Sélectionnez un cours</option>
-                                <option value="kindy">Kindy Courses</option>
-                                <option value="one-to-one-kids">One to one kids</option>
-                                <option value="teens">Teens Courses</option>
-                                <option value="adults">Adults courses</option>
-                                <option value="one-to-one-adultes">One to one Adultes</option>
-                                <option value="communication">Communication</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-secondary signup-btn">S'INSCRIRE</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container contact-container">
-            <h2 class="contact-title">Vous avez des<br>questions?</h2>
-            <p class="contact-subtitle">Tendez la main.</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+212 702 697 370</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>contact@teachernarjis.com</span>
-                </div>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.youtube.com/@TeacherNarjis" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@teacher.narjis" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/teacher.narjis/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h4 class="footer-title">Teacher Narjis</h4>
-                    <p>Des cours d'anglais de qualité, adaptés à vos besoins et à votre rythme.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Liens rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="#hero">Accueil</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#courses">Cours</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Kindy Courses</a></li>
-                        <li><a href="#">One to one kids</a></li>
-                        <li><a href="#">Teens Courses</a></li>
-                        <li><a href="#">Adults courses</a></li>
-                        <li><a href="#">Communication</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-title">Contact</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-phone"></i> +212 702 697 370</li>
-                        <li><i class="fas fa-envelope"></i> contact@teachernarjis.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Teacher Narjis. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-        });
-        
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    navLinks.classList.remove('nav-active');
-                }
-            });
-        });
-        
-        // Form Submission to Google Sheets
-        const signupForm = document.getElementById('signup-form');
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx2T0s7gVlTk5x2zXr2hXf6LcI8Jk0dD2W6nJm1JzXJz3XbZ3X/exec';
-        
-        signupForm.addEventListener('submit', e => {
-            e.preventDefault();
-            
-            // Form validation
-            const fullname = document.getElementById('fullname').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const courseType = document.getElementById('course-type').value;
-            
-            if(!fullname || !phone || !email || !courseType) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Erreur',
-                    text: 'Veuillez remplir tous les champs du formulaire',
-                    confirmButtonColor: '#f47c00'
-                });
-                return;
-            }
-            
-            // Create form data
-            const formData = new FormData();
-            formData.append('Nom Complet', fullname);
-            formData.append('Téléphone', phone);
-            formData.append('Email', email);
-            formData.append('Type de Cours', courseType);
-            formData.append('Date', new Date().toLocaleString());
-            
-            // Show loading
-            Swal.fire({
-                title: 'Envoi en cours...',
-                allowOutsideClick: false,
-                showConfirmButton: false,
-                willOpen: () => {
-                    Swal.showLoading();
-                }
-            });
-            
-            // Submit to Google Sheets
-            fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => {
-                if(response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Erreur de réseau');
-                }
-            })
-            .then(data => {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Inscription réussie !',
-                    text: 'Nous vous contacterons bientôt.',
-                    confirmButtonColor: '#f47c00'
-                });
-                signupForm.reset();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Erreur',
-                    text: "Une erreur s'est produite. Veuillez réessayer.",
-                    confirmButtonColor: '#f47c00'
-                });
-            });
-        });
-        
-        // Language Toggle Functionality
-        document.querySelector('.lang-ar').addEventListener('click', () => {
-            Swal.fire({
-                title: 'Version Arabe',
-                text: 'Passage à la version arabe du site',
-                icon: 'info',
-                confirmButtonColor: '#f47c00'
-            });
-        });
-        
-        // Video Play Functionality
-        document.querySelectorAll('.play-icon').forEach(icon => {
-            icon.addEventListener('click', () => {
-                Swal.fire({
-                    title: 'Lecture vidéo',
-                    html: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/76979871?h=8272103f6e" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>',
-                    showConfirmButton: false,
-                    width: 800,
-                    padding: 0
-                });
-            });
-        });
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="fr" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours d'anglais | Teacher Narjis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-        :root {
-            --primary: #0e1027;
-            --secondary: #f47c00;
-            --accent: #f37221;
-            --light: #ffe2d2;
-            --white: #ffffff;
-            --gray: #f5f5f5;
-            --dark: #333333;
-            --font-heading: 'Poppins', sans-serif;
-            --font-body: 'Fira Sans', sans-serif;
-            --section-bg: #feffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            font-size: 16px;
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background: var(--section-bg);
-        }
-
-        h1, h2, h3, h4 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            border: none;
-        }
-
-        .btn-primary {
-            background: transparent;
-            color: var(--secondary);
-            border: 2px solid var(--secondary);
-        }
-
-        .btn-secondary {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .hero, .about, .services, .courses, .signup, .contact {
-            background-color: var(--section-bg);
-        }
-
-        /* Header Styles */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            padding: 15px 0;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            position: relative;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 5%;
-        }
-
-        .logo img {
-            height: 100%;
-            width: auto;
-            max-width: 180px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin-right: 5%;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 16px;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-
-        .nav-contact {
-            color: #28a745 !important;
-        }
-
-        .nav-signup {
-            color: var(--accent) !important;
-        }
-
-        .language-toggle {
-            display: flex;
-            margin-left: 20px;
-        }
-
-        .lang-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .lang-fr {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .lang-ar {
-            background: var(--light);
-            color: var(--primary);
-        }
-
-        .mobile-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 100px 0 80px;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(to bottom, #feffff, #e6f7ff);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            padding-top: 25vh;
-        }
-
-        .hero-title {
-            font-size: 56px;
-            color: var(--primary);
-            margin-bottom: 10px;
-            max-width: 80%;
-        }
-
-        .hero-subtitle {
-            font-size: 24px;
-            color: #f35000;
-            margin-bottom: 15px;
-            font-weight: 400;
-        }
-
-        .hero-subheadline {
-            font-size: 20px;
-            color: var(--primary);
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-subheadline i {
-            margin-right: 10px;
-            color: #f35000;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-        }
-
-        /* About Section */
-        .about {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: 42px;
-            text-align: center;
-            margin-bottom: 60px;
-            color: var(--primary);
-        }
-
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            padding-left: 25%;
-        }
-
-        .about-text {
-            text-align: right;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .reason-title {
-            font-size: 24px;
-            font-weight: 700;
-            text-align: right;
-            margin-bottom: 30px;
-            color: var(--primary);
-        }
-
-        .goals {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 20px;
-            width: 100%;
-        }
-
-        .goal-item {
-            width: 100%;
-            text-align: right;
-            padding: 25px;
-            background: var(--white);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        }
-
-        .goal-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        }
-
-        .goal-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 20px;
-            color: var(--white);
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        .goal-content {
-            flex-grow: 1;
-        }
-
-        .goal-title {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 100px 0;
-        }
-
-        .services .section-title {
-            color: var(--secondary);
-        }
-
-        .services-subtitle {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 60px;
-            font-size: 18px;
-        }
-
-        .service-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-
-        .service-img {
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .service-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .service-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        .service-price {
-            font-weight: 700;
-            font-size: 20px;
-            color: var(--secondary);
-            margin-top: auto;
-            padding-top: 15px;
-        }
-        
-        .service-details {
-            margin-bottom: 10px;
-            font-size: 15px;
-            line-height: 1.5;
-        }
-        
-        .service-details i {
-            margin-right: 5px;
-            color: var(--accent);
-        }
-
-        /* Courses Section */
-        .courses {
-            padding: 100px 0;
-            background: linear-gradient(to bottom, #feffff, #f8f9ff);
-        }
-
-        .courses-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .course-video {
-            width: 350px;
-            height: 250px;
-            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--secondary);
-            font-size: 48px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .course-video::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(243, 114, 33, 0.3), rgba(14, 16, 39, 0.4));
-        }
-
-        .play-icon {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 2;
-            transition: transform 0.3s ease;
-        }
-
-        .play-icon:hover {
-            transform: scale(1.1);
-        }
-
-        /* Signup Section */
-        .signup {
-            padding: 100px 0;
-            background: linear-gradient(to bottom, #feffff, #fff8f5);
-        }
-
-        .signup-container {
-            max-width: 600px;
-            margin-left: auto;
-        }
-
         .signup-subtitle {
-            text-align: right;
+            text-align: center;
             margin-bottom: 40px;
             font-size: 18px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .signup-form {
@@ -1676,13 +491,14 @@
 
         .form-group {
             margin-bottom: 25px;
-            text-align: right;
+            text-align: left;
         }
 
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
+            font-size: 16px;
         }
 
         .form-control {
@@ -1737,61 +553,69 @@
         .contact-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
+            text-align: center;
         }
 
         .contact-title {
             font-size: 48px;
             color: var(--primary);
-            text-align: right;
             line-height: 1.3;
             max-width: 600px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .contact-subtitle {
             font-size: 24px;
             color: #f35000;
-            margin-bottom: 60px;
-            text-align: right;
+            margin-bottom: 50px;
         }
 
         .contact-info {
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            gap: 20px;
+            align-items: center;
+            gap: 25px;
             margin-bottom: 50px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            font-size: 18px;
-            gap: 10px;
-            direction: rtl;
+            font-size: 20px;
+            gap: 15px;
             background: var(--white);
-            padding: 15px 25px;
+            padding: 18px 30px;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            font-size: 24px;
         }
 
         .social-icons {
             display: flex;
-            gap: 20px;
-            justify-content: flex-end;
+            gap: 25px;
+            justify-content: center;
         }
 
         .social-icon {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background: var(--light);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--secondary);
-            font-size: 20px;
+            font-size: 24px;
             transition: all 0.3s ease;
             text-decoration: none;
             box-shadow: 0 3px 8px rgba(0,0,0,0.1);
@@ -1975,6 +799,20 @@
             .service-price {
                 font-size: 18px;
             }
+            
+            .goal-item {
+                padding: 20px;
+            }
+            
+            .goal-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .goal-title {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -1989,8 +827,8 @@
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#hero">ACCUEIL</a></li>
+                <li><a href="#about">À PROPOS</a></li>
                 <li><a href="https://youtube.com" target="_blank">BLOG</a></li>
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="https://wa.me/" target="_blank" class="nav-contact">CONTACT</a></li>
@@ -2008,7 +846,7 @@
         <div class="container hero-content">
             <h1 class="hero-title">Cours d'anglais</h1>
             <p class="hero-subtitle">En ligne et en direct</p>
-            <p class="hero-subheadline"><i class="fas fa-info-circle"></i>En petits groupes ou cours particuliers.</p>
+            <p class="hero-subheadline"><i class="fas fa-info-circle"></i> En petits groupes ou cours particuliers.</p>
             <div class="hero-buttons">
                 <a href="#services" class="btn btn-primary">NOS COURS</a>
                 <a href="#signup" class="btn btn-secondary">S'INSCRIRE</a>
@@ -2078,33 +916,6 @@
                     </div>
                 </div>
                 
-                <!-- One to one kids -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('One to one Kids.png');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">One to one kids</h3>
-                        <p>Programme personnalisé en individuel, adapté au besoins de vos petits. (+9 ans)</p>
-                        <p class="service-price">1500 DH</p>
-                    </div>
-                </div>
-                
-                <!-- Teens Courses -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('Teens Courses.jpg');">
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Teens Courses</h3>
-                        <div class="service-details">
-                            <i class="fas fa-users"></i> 5 élèves par classe
-                        </div>
-                        <div class="service-details">
-                            <i class="fas fa-clock"></i> 8 séances d'une heure et demi par mois
-                        </div>
-                        <p class="service-price">300 DH</p>
-                    </div>
-                </div>
-                
                 <!-- Adults courses -->
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('Adultes Courses.jpg');">
@@ -2121,6 +932,17 @@
                     </div>
                 </div>
                 
+                <!-- One to one kids -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('One to one Kids.png');">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">One to one kids</h3>
+                        <p>Programme personnalisé en individuel, adapté au besoins de vos petits. (+9 ans)</p>
+                        <p class="service-price">1500 DH</p>
+                    </div>
+                </div>
+                
                 <!-- One to one Adultes -->
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('Business courses.png');">
@@ -2129,6 +951,22 @@
                         <h3 class="service-title">One to one Adultes</h3>
                         <p>Programme personnalisé en individuel, adapté a vos besoins.</p>
                         <p class="service-price">1800 DH</p>
+                    </div>
+                </div>
+                
+                <!-- Teens Courses -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('Teens Courses.jpg');">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Teens Courses</h3>
+                        <div class="service-details">
+                            <i class="fas fa-users"></i> 5 élèves par classe
+                        </div>
+                        <div class="service-details">
+                            <i class="fas fa-clock"></i> 8 séances d'une heure et demi par mois
+                        </div>
+                        <p class="service-price">300 DH</p>
                     </div>
                 </div>
                 
@@ -2157,19 +995,16 @@
             <h2 class="section-title">Exemples de cours</h2>
             <div class="courses-container">
                 <div class="course-video">
-                    <i class="fas fa-play-circle"></i>
                     <div class="play-icon">
                         <i class="fas fa-play"></i>
                     </div>
                 </div>
                 <div class="course-video">
-                    <i class="fas fa-play-circle"></i>
                     <div class="play-icon">
                         <i class="fas fa-play"></i>
                     </div>
                 </div>
                 <div class="course-video">
-                    <i class="fas fa-play-circle"></i>
                     <div class="play-icon">
                         <i class="fas fa-play"></i>
                     </div>
@@ -2190,26 +1025,26 @@
                         <input type="text" id="fullname" class="form-control" required>
                     </div>
                     <div class="form-group">
+                        <label for="course-type">Type de Cours</label>
+                        <div class="select-wrapper">
+                            <select id="course-type" class="form-control" required>
+                                <option value="">Sélectionnez un cours</option>
+                                <option value="kindy">Kindy Courses</option>
+                                <option value="adults">Adults courses</option>
+                                <option value="one-to-one-kids">One to one kids</option>
+                                <option value="one-to-one-adultes">One to one Adultes</option>
+                                <option value="teens">Teens Courses</option>
+                                <option value="communication">Communication</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="phone">Téléphone</label>
                         <input type="tel" id="phone" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="course-type">Type de Cours</label>
-                        <div class="select-wrapper">
-                            <select id="course-type" class="form-control" required>
-                                <option value="">Sélectionnez un cours</option>
-                                <option value="kindy">Kindy Courses</option>
-                                <option value="one-to-one-kids">One to one kids</option>
-                                <option value="teens">Teens Courses</option>
-                                <option value="adults">Adults courses</option>
-                                <option value="one-to-one-adultes">One to one Adultes</option>
-                                <option value="communication">Communication</option>
-                            </select>
-                        </div>
                     </div>
                     <button type="submit" class="btn btn-secondary signup-btn">S'INSCRIRE</button>
                 </form>
@@ -2220,7 +1055,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container contact-container">
-            <h2 class="contact-title">Vous avez des<br>questions?</h2>
+            <h2 class="contact-title">Vous avez des questions ?</h2>
             <p class="contact-subtitle">Tendez la main.</p>
             <div class="contact-info">
                 <div class="contact-item">
@@ -2229,7 +1064,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>contact@teachernarjis.com</span>
+                    <span>teacher.narjis@gmail.com</span>
                 </div>
             </div>
             <div class="social-icons">
@@ -2272,7 +1107,7 @@
                     <h4 class="footer-title">Contact</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-phone"></i> +212 702 697 370</li>
-                        <li><i class="fas fa-envelope"></i> contact@teachernarjis.com</li>
+                        <li><i class="fas fa-envelope"></i> teacher.narjis@gmail.com</li>
                     </ul>
                 </div>
             </div>
